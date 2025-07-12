@@ -1,0 +1,301 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+      .business-card {
+        -webkit-perspective: 1000px;
+        perspective: 1000px;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        display: block;
+        width: 510px;
+        height: 291px;
+        position: absolute;
+        left: 0%;
+        top: 33%;
+        -webkit-transform: translate(-15%, -50%);
+        transform: translate(15%, -50%);
+        cursor: pointer;
+      }
+
+      .business-card .card {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -webkit-transition: all 600ms;
+        transition: all 600ms;
+        z-index: 20;
+      }
+
+      .card div {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: url(images/business-card-front.png);
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        line-height: 200px;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 2px;
+      }
+
+      .card .back {
+        background: url(images/business-card-back.png);
+        color: #FFF;
+        -webkit-transform: rotateX(180deg);
+        transform: rotateX(180deg);
+      }
+
+      label:hover .card {
+        -webkit-transform: rotateX(20deg);
+        transform: rotateX(20deg);
+        box-shadow: 0 20px 20px rgba(50, 50, 50, 0.2);
+      }
+
+      .business-card input {
+        display: none;
+      }
+
+      :checked + .card {
+        transform: rotateX(180deg);
+        -webkit-transform: rotateX(180deg);
+      }
+
+      label:hover :checked + .card {
+        transform: rotateX(160deg);
+        -webkit-transform: rotateX(160deg);
+        box-shadow: 0 20px 20px rgba(255, 255, 255, 0.2);
+      }
+      .primary {
+        background-color: #c36030;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <section class="bg-[url('images/bg.png')] bg-no-repeat bg-cover bg-center">
+      <nav class="bg-gradient-to-b from-gray-900 to-transparent py-4">
+        <div class="container mx-auto max-w-screen-xl py-4 text-center">
+          <img src="images/logos.png" class="mx-auto h-12"/>
+        </div>
+      </nav>
+      <div class="relative py-8 px-4 mx-auto max-w-screen-xl text-white lg:py-16 xl:px-0 z-1">
+        <div class="mb-6 max-w-screen-md pt-32 lg:mb-0 lg:pb-24">
+            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-tight text-white md:text-5xl">Foggy About Online Marketing?</h1>
+            <p class="mb-6 text-gray-100 lg:mb-8 md:text-lg">
+              Whether you need a brand new website, a digital refresh, or guidance on marketing and visibility, Fog Tree Studios is ready to walk with you. Send us a message, and let's start tracking your path to being seen, remembered, and chosen.
+            </p>
+
+            <a href="#how" class="py-3 px-5 font-medium text-center text-white rounded-lg primary hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-red-900 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">
+                Learn How
+            </a>
+        </div> 
+      </div>
+    </section>
+    <section id="how" class="container mx-auto max-w-screen-xl">
+      <div class="xl:py-24 py-16">
+        <div class="grid lg:grid-cols-2 grid-cols-1 2xl:gap-24 gap-10 items-center">
+          <div>
+            <img src="images/seen3.png" data-aos="fade-right" data-aos-duration="1500" class="aos-init aos-animate">
+          </div>
+          <div>
+            <h1 class="text-3xl/tight font-bold mt-3 mb-4">Get Seen</h1>
+            <p class="text-gray-500 text-lg mb-2">
+              Your business has a unique personality—let's make sure people see it.
+            </p>
+            <p class="text-gray-500 text-lg mb-2">
+              At Fog Tree Studios, we don't just help you get found—we help you connect. Through clear messaging, smart SEO, and thoughtful 
+              design, we showcase what makes your business special so it resonates with the right audience.
+            </p>
+            <p class="text-gray-500 text-lg mb-2">
+              You shouldn't have to become a web expert to build trust online. We take care of the strategy, the structure, and the 
+              behind-the-scenes work, so your personality shines through effortlessly—and your customers feel like they already know you.
+            </p>
+            <p class="text-gray-500 text-lg mb-2">
+              Less stress. More connection. That's how we help your business get seen.
+            </p>
+            <button class="mt-8 flex items-center">
+                <a href="#contact" class="primary text-white rounded-md hover:bg-primary hover:text-white hover:shadow-lg hover:shadow-primary/30 focus:shadow-none focus:outline focus:outline-primary/40 transition-all duration-500 py-4 px-6">
+                  Contact us
+                </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-gray-900">
+      <div class="xl:py-24 py-16 container mx-auto max-w-screen-xl">
+        <div class="grid lg:grid-cols-2 grid-cols-1 2xl:gap-24 gap-10 items-center">
+          <div>
+            <h1 class="text-white text-3xl/tight font-bold mt-3 mb-4">Focus on what you do best</h1>
+            <p class="text-lg text-white">We carefully craft marketing efforts for capturing leads, which are potential customer contacts. By focusing on one call-to-action, often valuable content like discounts or contests in exchange for email addresses, you build an email list that allows you to <span class="text-primary">nurture leads and convert them</span> into paying customers down the line.</p>
+            <button class="mt-12 flex items-center">
+                <a href="#contact" class="primary text-white rounded-md hover:bg-primary hover:text-white hover:shadow-lg hover:shadow-primary/30 focus:shadow-none focus:outline focus:outline-primary/40 transition-all duration-500 py-4 px-6">
+                  Tell your story
+                </a>
+            </button>
+          </div>
+          <div>
+            <img src="images/focus.png" data-aos="fade-right" data-aos-duration="1500" class="aos-init aos-animate h-128 mx-auto">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-orange-200">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+          <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-16">
+              <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">What We Do</h2>
+              <p class="font-light text-gray-500 dark:text-gray-400 sm:text-xl"></p>
+          </div>
+          <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-8 xl:gap-8 md:space-y-0">
+              <div class="p-6 bg-white rounded shadow-lg shadow-orange-400/30">
+                <h3 class="mb-2 text-xl font-bold">Web Design</h3>
+                  <p class="font-light text-gray-500">
+                    We design beautiful, custom websites that reflect your brand's personality and connect with your audience. 
+                    Every site is built with usability, mobile responsiveness, and visibility in mind—because a great website shouldn't 
+                    just exist, it should be <span class="text-red-600">found</span>.
+                  </p>
+              </div>
+              <div class="p-6 bg-white rounded shadow-lg shadow-orange-400/30">
+                  <h3 class="mb-2 text-xl font-bold">Web Management</h3>
+                  <p class="font-light text-gray-500">
+                    From regular updates to security and content changes, we keep your site running smoothly so you can focus on running your business. 
+                    Think of us as your behind-the-scenes trail guide, making sure everything works—even when you're not looking.
+                  </p>
+              </div>
+              <div class="p-6 bg-white rounded shadow-lg shadow-orange-400/30">
+                  <h3 class="mb-2 text-xl font-bold">Media Buying</h3>
+                  <p class="font-light text-gray-500">
+                    We plan and place strategic digital ads that put your business in front of the right people at the right time. 
+                    Whether it's Google Ads, social media, or local campaigns, we help you get seen without wasting a dime.
+                  </p>
+              </div>
+              <div class="p-6 bg-white rounded shadow-lg shadow-orange-400/30">
+                  <h3 class="mb-2 text-xl font-bold">Print Design</h3>
+                  <p class="font-light text-gray-500">
+                    From brochures to banners to branded bags, we create print materials that turn heads and leave a lasting impression. 
+                    Our designs are clean, bold, and consistent with your brand—online and off.
+                  </p>
+              </div>
+              <div class="p-6 bg-white rounded shadow-lg shadow-orange-400/30">
+                  <h3 class="mb-2 text-xl font-bold">Marketing</h3>
+                  <p class="font-light text-gray-500">
+                    We help you build a clear marketing strategy that cuts through the noise. From messaging to execution, we align 
+                    your online and offline presence so your customers know exactly who you are—and how to find you.
+                  </p>
+              </div>
+              <div class="p-6 bg-white rounded shadow primary content-center text-center shadow-lg shadow-orange-400/30">
+                <a href="#contact" class="text-2xl font-bold text-white">
+                  Contact Us
+                </a>
+            </div>
+          </div>
+      </div>
+    </section>
+    <section class="bg-orange-100 py-8 px-4 mx-auto sm:py-16 lg:px-6">
+      <!-- Swiper -->
+  <div class="swiper mySwiper max-w-screen-xl">
+    <div class="swiper-wrapper items-center">
+      <div class="swiper-slide bg-orange-100">
+        <img src="images/portfolio-5.jpg" alt="" class="max-h-100">
+      </div>
+      <div class="swiper-slide bg-orange-100">
+        <img src="images/portfolio-2.jpg" alt="" class="max-h-100">
+      </div>
+      <div class="swiper-slide bg-orange-100">
+        <img src="images/portfolio-4.jpg" alt="" class="max-h-100">
+      </div>
+      <div class="swiper-slide bg-orange-100">
+        <img src="images/portfolio-8.jpg" alt="" class="max-h-100">
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+    </section>
+    <section id="contact" class="bg-white dark:bg-gray-900">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+          <div class="px-4 mx-auto max-w-screen-sm text-center lg:px-6 mb-8 lg:mb-16">
+              <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Contact Us</h2>
+              <p class="font-light text-gray-600 dark:text-gray-400 sm:text-xl">
+                Fog Tree Studios illuminates the path for your online business.
+              </p>
+          </div>
+          <div class="grid grid-cols-1 lg:gap-8 lg:grid-cols-2">
+            <div class="grid grid-cols-1 col-span-1 gap-8 text-center sm:grid-cols-2 lg:grid-cols-1">
+              <div class="w-full relative">
+                <label class="business-card w-full">
+                  <input type="checkbox"  />
+                  <div class="card">
+                      <div class="front"></div>
+                      <div class="back"></div>
+                  </div>
+                </label>
+              </div>
+            </div>
+              <div class="col-span-1 mb-8 lg:mb-0">
+                  <form name="contact" method="POST" data-netlify="true" class="grid grid-cols-1 gap-8 mx-auto max-w-screen-md">
+                    <input type="hidden" name="subject" value="Fog Tree Inquiry" />
+                      <div>
+                          <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
+                          <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500 dark:shadow-sm-light" placeholder="email@example.com" required>
+                      </div>
+                      <div>
+                          <label for="phone-number" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Phone Number</label>
+                          <input type="number" id="phone-number" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-orange-500 focus:border-orange-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500 dark:shadow-sm-light" placeholder="(123) 456-7890" required>
+                      </div>
+                      <div class="">
+                          <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
+                          <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-orange-500 focus:border-orange-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500" placeholder="Leave a comment..."></textarea>
+                      </div>
+                      <button type="submit" class="py-4 px-6 text-sm font-medium text-center text-white rounded-lg primary sm:w-fit hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800">Send message</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+
+<footer class="bg-white dark:bg-gray-800">
+  <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+      <div class="sm:flex sm:items-center sm:justify-between">
+          <a href="#" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+              <img src="images/logo.png" class="h-8" alt="Logo" />
+          </a>
+          <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+              <li>
+                  <p class="hover:underline me-4 md:me-6">© 2025 Fog Tree Studios. All Rights Reserved.</p>
+              </li>
+          </ul>
+      </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+  </body>
+</html>
